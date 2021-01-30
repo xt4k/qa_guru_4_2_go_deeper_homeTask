@@ -13,7 +13,7 @@ class CssXpathExamples {
 
         // <input type="email" class="inputtext login_form_input_box" name="email" id="email" data-testid="royal_email">
         // эталон
-        $(by("data-testid", "royal_email")).setValue("some@email.com");    // priory if data-testid exists
+        $(by("data-testid", "royal_email")).setValue("some@email.com");    // primary if data-testid exists
 
         // другие возможности сделать тоже самое
         $("#email").setValue("some@email.com");                             // primary
