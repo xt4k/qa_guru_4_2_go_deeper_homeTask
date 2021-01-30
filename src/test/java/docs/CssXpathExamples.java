@@ -16,9 +16,10 @@ class CssXpathExamples {
         $(by("data-testid", "royal_email")).setValue("some@email.com");    // priory if data-testid exists
 
         // другие возможности сделать тоже самое
-        $("#email").setValue("some@email.com");                        // priory
+        $("#email").setValue("some@email.com");                             // primary
         $(byId("email")).setValue("some@email.com");
         $("[id='email']").setValue("some@email.com");
+        $("[id=email]").setValue("some@email.com"); // if id has "." or " ", then '' required
         $("input[id='email']").setValue("some@email.com");
         $("input#email").setValue("some@email.com");
         $(by("id", "email")).setValue("some@email.com");
@@ -26,7 +27,7 @@ class CssXpathExamples {
         $x("//input[@id='email']").setValue("some@email.com");
         $x("//*[@id='email']").setValue("some@email.com");
 
-        $(byName("email")).setValue("some@email.com");                       // priory
+        $(byName("email")).setValue("some@email.com");                       // primary
         $("[name='email']").setValue("some@email.com");
         $("input[name='email']").setValue("some@email.com");
         $(by("name", "email")).setValue("some@email.com");
@@ -36,7 +37,7 @@ class CssXpathExamples {
         $x("//*[@name='email']").setValue("some@email.com");
 
         $(byClassName("login_form_input_box")).setValue("some@email.com");
-        $(".login_form_input_box").setValue("some@email.com");   // priory
+        $(".login_form_input_box").setValue("some@email.com");                // primary
         $(".inputtext.login_form_input_box").setValue("some@email.com");
         $("input.inputtext.login_form_input_box").setValue("some@email.com");
         $("input.inputtext.login_form_input_box#email").setValue("some@email.com");
