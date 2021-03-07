@@ -45,7 +45,7 @@ public class StudentRegFormBirthDateTest extends BaseTest {
         $("#dateOfBirthInput").sendKeys(Keys.chord(Keys.CONTROL, "a"));
         $("#dateOfBirthInput").sendKeys(dateIn + ENTER);
 
-        $("#submit").scrollTo().click();
+        $("#submit").click();
 
         //Assert section
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
