@@ -38,13 +38,10 @@ public class StudentRegFormBirthDateTest extends BaseTest {
         $("#lastName").setValue(lName);
         $("#userEmail").setValue(email);
 
-        String cssGender = format("#gender-radio-%s", gender);
-        $(cssGender).parent().click();
-        String genderName = $(cssGender).getValue();
+        $(format("#gender-radio-%s", gender)).parent().click();
         $("#userNumber").setValue(mobileNum.toString());
         $("#dateOfBirthInput").sendKeys(Keys.chord(Keys.CONTROL, "a"));
         $("#dateOfBirthInput").sendKeys(dateIn + ENTER);
-
         $("#submit").click();
 
         //Assert section
