@@ -1,5 +1,6 @@
-package helper;
+package helpers;
 
+import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 
 import java.io.FileReader;
